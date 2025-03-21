@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+    .banner {
+        text-align: center;
+        background-color: #f8f8f8;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .promo-box {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .promo-box h2 {
+        margin-top: 0;
+    }
+    .sections {
+        display: flex;
+        justify-content: space-between;
+    }
+    .section {
+        width: 48%;
+        border: 1px solid #ccc;
+        padding: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="banner">
+    <h1>Recursos Autoayuda </h1>
+</div>
+
+<div class="promo-box">
+    <h2>Para el manejo del estrés</h2>
+    <li> <strong>Respira profundamente:</strong> Usa la técnica 4-7-8 (inhala por 4 segundos, mantén por 7 y exhala por 8). Ayuda a calmar el sistema nervioso</li>
+    <li> <strong>Organiza tus prioridades:</strong> Haz listas y enfócate en tareas pequeñas para evitar sentirte abrumado.</li>
+    <li> <strong>Tiempo para ti:</strong> Dedica al menos 10-15 minutos al día para hacer algo que disfrutes.</li>
+</div>
+
+<div class="promo-box">
+    <h2>Para mejorar la autoestima</h2>
+    <li> <strong>Háblate con cariño:</strong> Cambia el diálogo interno negativo por afirmaciones positivas.</li>
+    <li> <strong>Reconoce tus logros:</strong> Celebra incluso los pequeños avances.</li>
+    <li> <strong>Rodéate de personas positivas:</strong> Mantén relaciones con personas que te apoyen y te valoren.</li>
+</div>
+
+<div class="promo-box">
+    <h2>Para combatir la ansiedad</h2>
+    <li> <strong>Vive el presente:</strong> Practica mindfulness</li>
+    <li> <strong>Actividad física:</strong>Ejercito</li>
+    <li> <strong>Evita el exceso de cafeína:</strong>Reducir</li>
+    <p>
+        <img  src="https://img.freepik.com/vector-gratis/ilustracion-concepto-ansiedad_114360-8074.jpg?t=st=1737080298~exp=1737083898~hmac=90e412e690d0ed5ccd9e522745d9c213bc6785d8b3a8768ed131c271c1a67e72&w=740" alt="Hand Cursor" width="200">
+    </p>
+</div>
+
+<div class="sections">
+    <div class="section">
+        <h2>Para ser más resiliente</h2>
+        <li> <strong>Acepta el cambio:</strong> Aprende a adaptarte y ve los retos como oportunidades de crecimiento.</li>
+        <li> <strong>Practica el autocuidado:</strong> Dormir bien, comer saludable y hacer ejercicio fortalecen la mente.</li>
+        <li> <strong>Busca apoyo:</strong> Hablar con amigos, familiares o un terapeuta te ayudará a procesar emociones difíciles.</li>
+    </div>
+    <div class="section ">
+        <h2>¿Cómo empezar a Cuidar mi Salud Mental?</h2>
+        <iframe width="750" height="350" src="https://www.youtube.com/embed/wfOHdfqqJTs" title="¿Cómo empezar a Cuidar mi Salud Mental?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+    </div>
+</div>
+</body>
+
+{% endblock %}

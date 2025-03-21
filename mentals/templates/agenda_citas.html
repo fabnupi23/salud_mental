@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4 mt-5">            
+
+            <form action="/agendar/" method="POST" class="card card-body">
+                {% csrf_token %}
+
+                <h1>¡Agenda tu próxima cita!</h1>
+
+                <p>En esta sección, puedes programar tus sesiones con profesionales de salud mental de manera fácil y rápida. Da un paso más hacia tu bienestar emocional.</p>
+                <strong>¡Estamos aquí para ti!</strong>
+                
+                
+                {{error}}
+
+                {{form}}
+
+                <button class="btn btn-primary">Solicitar</button>
+
+            </form>            
+        </div>
+    </div>
+</main>
+
+    
+
+
+{% endblock %}
+

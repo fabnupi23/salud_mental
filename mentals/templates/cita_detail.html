@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="container py-5">
+    <section class="card card-body">
+        <h1  class="display-5 text-center">¡Detalles de tu cita!</h1>
+            <p>En esta sección, encontrarás toda la información relacionada con tus citas agendadas, incluyendo el profesional asignado, la fecha, hora y una descripción detallada.</p>
+
+            <p>Revisa los detalles para asegurarte de que todo esté en orden y prepárate para aprovechar al máximo tu sesión. </p>
+
+            <strong>¡Tu bienestar es nuestra prioridad!</strong>
+
+    </section>
+</main>
+
+<main class="container ">
+    <div class="row">
+        <div class="col-md-4 offset-md-4 mt-5">
+            
+            <h1 class="text-secondary">{{ cita.title }}</h1>
+
+            {{error}}
+
+            <form method="POST" action="{% url 'cita_detail' cita.id %}">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit" class="btn btn-primary">
+                    Actualizar
+                </button>
+            </form>
+            
+            <div class="mt-5 d-flex">
+                
+    
+                <form action="{% url 'complete_task' cita.id %}" method="POST"> 
+                    {% csrf_token %} 
+                    <button class="btn btn-secondary">Atendido</button> 
+                </form>
+    
+                <form action="{% url 'delete_task' cita.id %}" method="POST"> 
+                    {% csrf_token %} 
+                    <button class="btn btn-danger">Eliminar Cita</button>
+            </div>
+             
+            </form>
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}

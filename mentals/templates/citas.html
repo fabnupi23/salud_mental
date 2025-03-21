@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+
+            <h1 class="text-center display-5 py-5">¡Bienvenido a tu sección de citas agendadas!</h1>
+            <p>Aquí podrás visualizar y gestionar tus citas programadas con profesionales de salud mental. Mantén un seguimiento fácil y organizado de tus sesiones para continuar avanzando en tu bienestar.</p>
+            <strong>¡Gracias por cuidar de ti mismoo!</strong>
+
+            <ul class="list-group">
+                {% for cita in citas %}
+                    <a class="list-group-item" href="{% url 'cita_detail' cita.id %}"> 
+                        
+                        <header class="d-flex justify-content-between">
+
+                            {% if cita.important %}
+                            <h3 class="fw-bold text-success">{{ cita.title }}</h3>
+                            
+                            {% else %}
+                              <h3 class="fw-bold">{{ cita.title }}</h3>  
+                            {% endif %}
+                            <p><p>{{ cita.user }}</p></p>
+                            <p>{{ cita.date }}</p>
+                        </header>
+
+                        
+                        <p>{{ cita.professional }}</p>
+                        <p>{{ cita.description }}</p>
+
+                        <p>{{ cita.datecompleted | date:'M j Y:i' }}</p>                   
+                        
+                    </a>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}

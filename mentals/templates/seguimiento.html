@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+    .banner {
+        text-align: center;
+        background-color: #f8f8f8;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .promo-box {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .promo-box h2 {
+        margin-top: 0;
+    }
+    .sections {
+        display: flex;
+        justify-content: space-between;
+    }
+    .section {
+        width: 48%;
+        border: 1px solid #ccc;
+        padding: 20px;
+    }
+    .youtube-thumbnail {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+</head>
+<body>
+<div class="banner">
+    <h1>Segumiento </h1>
+</div>
+
+<div class="promo-box">
+    <h2>Titulo 2</h2>
+    <p>Texto</p>
+    <p>Texto</p>
+    <p>
+        <img src="logo_udes.png" alt="Imagen_1" width="100">
+        <img src="logo_vicerrectoria.png" alt="Imagen_2" width="100">
+        <img src="logo_servicio_empleo.png" alt="Imagen_3" width="100">
+    </p>
+</div>
+
+<div class="promo-box">
+    <h2>Titulo 2</h2>
+    <p>Texto</p>
+</div>
+
+<div class="promo-box">
+    <h2>Titulo 2</h2>
+    <p>Texto</p>
+    <p>
+        <img src="hand_cursor.png" alt="Hand Cursor" width="50">
+    </p>
+</div>
+
+<div class="sections">
+    <div class="section">
+        <h2>Titulo 2</h2>
+        <p>Texto</p>
+        <img src="students.png" alt="Group of Students" width="100%">
+    </div>
+    <div class="section youtube-thumbnail">
+        <h2>Titulo 2</h2>
+        <a href="https://www.youtube.com/watch?v=link">Ver Video</a>
+    </div>
+</div>
+</body>
+
+{% endblock %}
